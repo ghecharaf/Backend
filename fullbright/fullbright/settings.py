@@ -33,7 +33,7 @@ SECRET_KEY = '3#3z=3$-0b^)$2guz2o^#i%5)oi99%i*@6s@#_r@o=q6)i+nrf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -92,11 +92,14 @@ WSGI_APPLICATION = 'fullbright.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'promedia',
+        'USER': 'user123',
+        'PASSWORD': 'user123',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
