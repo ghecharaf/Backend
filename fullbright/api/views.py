@@ -920,13 +920,13 @@ class VideoConfirmation(generics.ListCreateAPIView):
 
 class ChaineView(generics.ListCreateAPIView):
     permission_classes = [IsAuthenticated & ChainePermissions]
-    queryset = Chaine.objects.all()
+    queryset = Chaine.objects.all().order_by("nom")
     serializer_class = ChaineSerializer
     pagination_class = MyPagination
 
 
 class ChaineAllView(generics.ListAPIView):
-    queryset = Chaine.objects.all()
+    queryset = Chaine.objects.all().order_by("nom")
     serializer_class = ChaineSerializer
 
 
