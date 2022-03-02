@@ -103,6 +103,9 @@ urlpatterns = [
     path('tableprogrammeclient/', ChaneiClientView.as_view()),
     # path('video/search/', VideoView.as_view()),
     path('video/<int:pk>/', PubliciteDetail.as_view()),
+    path('videoclient/<int:pk>/', PubliciteClientDetail.as_view()),
+    
+    
     path('video/confirmed/', VideoConfirmation.as_view()),
     path('video/confirmed/count/', VideoConfirmedCount.as_view()),
     # path('videoclient/', ChaneiClientView.as_view()),
