@@ -105,7 +105,7 @@ urlpatterns = [
     path('video/<int:pk>/', PubliciteDetail.as_view()),
     path('video/confirmed/', VideoConfirmation.as_view()),
     path('video/confirmed/count/', VideoConfirmedCount.as_view()),
-    # path('videoclient/', ChaneiClientView.as_view()),
+    path('videoclient/<int:pk>/', PubliciteClientDetail.as_view()),
 
     path('articles/link/', ArticleLinkClient.as_view()),
     path('pub/link/', PubLinkClient.as_view()),
